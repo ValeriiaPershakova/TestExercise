@@ -50,17 +50,17 @@
             <version>${commons-lang3.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.code.gson</groupId>-->
+        <!--            <artifactId>gson</artifactId>-->
+        <!--            <version>${gson.version}</version>-->
+        <!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>${hamcrest.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.hamcrest</groupId>-->
+        <!--            <artifactId>hamcrest-core</artifactId>-->
+        <!--            <version>${hamcrest.version}</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -107,28 +107,6 @@
                         <suiteXmlFile>${suite.file}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jsonschema2pojo</groupId>
-                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.5.1</version>
-                <configuration>
-                    <sourceDirectory>${basedir}/src/main/resources/schemes</sourceDirectory>
-                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
-                    <targetPackage>beans</targetPackage>
-                    <addCompileSourceRoot>true</addCompileSourceRoot>
-                    <sourceType>json</sourceType>
-                    <includeAccessors>false</includeAccessors>
-                    <annotationStyle>gson</annotationStyle>
-                    <includeGetters>true</includeGetters>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

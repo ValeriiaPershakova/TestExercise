@@ -25,8 +25,8 @@ public abstract class AbstractBaseApi {
                     .addResponseSpecification(baseResponse)
                     .expectStatusCode(HttpStatus.SC_OK)
                     .build();
-    //    private static Url url = ConfigFactory.create(Url.class);
-    private static Map<String, String> url = PropertyReader.getProperties("src/test/resources/url.properties");
+
+    private static Map<String, String> url = PropertyReader.getProperties(System.getProperty("user.dir") + "/target/test-classes/url.properties");
     public static RequestSpecification baseRequestConfiguration =
             new RequestSpecBuilder()
                     .setAccept(ContentType.JSON)
