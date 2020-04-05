@@ -1,16 +1,11 @@
 package api;
 
-import beans.Post;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import constants.Fields;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PostApi extends AbstractBaseApi {
