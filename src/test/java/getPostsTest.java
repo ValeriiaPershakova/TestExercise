@@ -34,7 +34,7 @@ public class getPostsTest {
     }
 
     @Test
-    public void getPostsByNonexistingSetOfUserIdAndTitleTest() {
+    public void getPostsByNonexistentSetOfUserIdAndTitleTest() {
         JsonPath posts = PostApi.with()
                 .userId(1)
                 .title("in quibusdam tempore odit est dolorem")
