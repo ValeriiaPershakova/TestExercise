@@ -37,7 +37,7 @@ public class getPostsTest {
     }
 
     @Test(dataProvider = "Invalid Data Sets Provider", dataProviderClass = InvalidDataSetDataProvider.class)
-    public void getPostsByInexistingSetOfUserIdAndTitleTest(Object userId, Object title) {
+    public void getPostsByNonexistingSetOfUserIdAndTitleTest(Object userId, Object title) {
         List<Post> posts = PostApi.with()
                 .userId(userId)
                 .title(title)
