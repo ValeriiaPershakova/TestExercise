@@ -10,7 +10,6 @@ import java.util.Map;
 
 public class PostApi extends AbstractBaseApi {
     private Map<String, Object> params = new HashMap<>();
-    private Method requestMethod = Method.GET;
 
     private PostApi() {
     }
@@ -37,16 +36,11 @@ public class PostApi extends AbstractBaseApi {
             return this;
         }
 
-        public ApiBuilder request(Method req) {
-            api.requestMethod = req;
-            return this;
-        }
-
         public Response callApi() {
             return RestAssured.given(baseRequestConfiguration)
                     .with()
                     .queryParams(api.params)
-                    .request(api.requestMethod).prettyPeek();
+                    .request(Method.GET).prettyPeek();
         }
     }
 
