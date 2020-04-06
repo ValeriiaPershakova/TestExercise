@@ -25,7 +25,7 @@ public class getPostsTest {
     @Test
     public void getPostsByUserIdAndTitleTest() {
         List<Post> posts = PostApi.with()
-                .userId("1")
+                .userId(1)
                 .title("qui est esse")
                 .callApi()
                 .then()
